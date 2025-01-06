@@ -26,23 +26,16 @@ export default function Home() {
 
 	return (
 		<div className="w-full h-full">
-			<main className="container mx-auto px-4 py-8 mt-20 flex flex-row gap-x-4">
-				<div className="mb-8">
-					<h1 className="text-4xl font-bold mb-2 text-white">
-						Filmes Populares
+			<main className="container mx-auto px-4 flex flex-col gap-x-4">
+				<div className="h-20 w-full flex flex-col">
+					<h1 className="font-semibold text-3xl text-white mt-auto">
+						Veja aqui os filmes mais populares recentemente{" "}
 					</h1>
-					<p className="text-gray-600">
-						Descubra os filmes mais populares do momento
-					</p>
-					<div className="my-4">
-						<input
-							type="text"
-							placeholder="Buscar filmes..."
-							className="w-full md:w-96 px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
-						/>
-					</div>
+					<h1 className="font-semibold text-xl text-zinc-300 mt-auto">
+						Clique nos <span className="italic">cards</span> para
+						mais informações de cada filme
+					</h1>
 				</div>
-
 				<MovieList
 					movies={movies}
 					isLoading={isLoading}

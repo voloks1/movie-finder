@@ -72,7 +72,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 							</DialogHeader>
 
 							{/* Banner/Backdrop */}
-							<div className="relative w-full aspect-video rounded-lg overflow-hidden">
+							<div className="relative w-full 2xl:aspect-video rounded-lg overflow-hidden">
 								<img
 									src={`https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`}
 									alt={movieDetails.title}
