@@ -17,4 +17,8 @@ export const tmdbAPI = {
 		api.get(`/movie/${movieID}`, {
 			params: { append_to_response: "credits,videos,similar" },
 		}),
+	getTopRated: (page = 1) => api.get("movie/top_rated", { params: { page } }),
+	getUpcoming: (page = 1) => api.get("movie/upcoming", { params: { page } }),
+	getMovieID: (id: string) =>
+		api.get(`movie/${id}`).then((response) => response.data),
 };

@@ -7,7 +7,6 @@ interface MovieDetailsProps {
 export const MovieDetails = ({ movie }: MovieDetailsProps) => {
 	return (
 		<div className="max-w-7xl mx-auto px-4 py-8">
-			{/* Background Image */}
 			<div
 				className="w-full h-[400px] relative rounded-xl overflow-hidden mb-8"
 				style={{
@@ -15,10 +14,8 @@ export const MovieDetails = ({ movie }: MovieDetailsProps) => {
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 				}}>
-				{/* Gradient overlay */}
 				<div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
 
-				{/* Movie info overlay */}
 				<div className="absolute bottom-0 left-0 p-8 text-white">
 					<h1 className="text-4xl font-bold mb-2">{movie.title}</h1>
 					<div className="flex items-center gap-4 mb-4">
@@ -34,7 +31,6 @@ export const MovieDetails = ({ movie }: MovieDetailsProps) => {
 						</span>
 					</div>
 
-					{/* Genres */}
 					<div className="flex gap-2">
 						{movie.genres.map((genre) => (
 							<span
@@ -47,7 +43,6 @@ export const MovieDetails = ({ movie }: MovieDetailsProps) => {
 				</div>
 			</div>
 
-			{/* Overview */}
 			<div className="max-w-3xl mb-8">
 				<h2 className="text-2xl font-semibold mb-4">Sinopse</h2>
 				<p className="text-gray-700 leading-relaxed">

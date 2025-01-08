@@ -1,4 +1,5 @@
 export interface Movie {
+	trailerKey: string;
 	id: number;
 	title: string;
 	poster_path: string;

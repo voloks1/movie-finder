@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Movie, movieDetails } from "@/types/movies";
+import { movieDetails } from "@/types/movies";
 import { Card, CardContent } from "@/components/ui/card";
 import {
 	Dialog,
@@ -10,15 +10,12 @@ import {
 	DialogTitle,
 } from "@/components/ui/dialog";
 import { tmdbAPI } from "@/api/tmdb";
+import { MovieCardProps } from "@/components/Movies/MovieCard";
 import { Button } from "../ui/button";
 import { Play } from "lucide-react";
 import Link from "next/link";
 
-export interface MovieCardProps {
-	movie: Movie;
-}
-
-export const MovieCard = ({ movie }: MovieCardProps) => {
+export const UpcomingCard = ({ movie }: MovieCardProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [movieDetails, setMovieDetails] = useState<movieDetails | null>(null);
 	const [isTrailerOpen, setIsTrailerOpen] = useState(false);
@@ -142,18 +139,15 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 											)}
 										</span>
 									</div>
-									<div className="flex flex-row">
-										<div className="flex flex-wrap gap-2">
-											{movieDetails.genres.map(
-												(genre) => (
-													<span
-														key={genre.id}
-														className="px-3 py-1 bg-accentColor font-semibold text-white rounded-full text-sm">
-														{genre.name}
-													</span>
-												),
-											)}
-										</div>
+
+									<div className="flex flex-wrap gap-2">
+										{movieDetails.genres.map((genre) => (
+											<span
+												key={genre.id}
+												className="px-3 py-1 bg-accentColor font-semibold text-white rounded-full text-sm">
+												{genre.name}
+											</span>
+										))}
 
 										<Link
 											href={`/movie/${movie.id}`}

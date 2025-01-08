@@ -1,19 +1,19 @@
 import { Movie } from "@/types/movies";
-import { MovieCard } from "./MovieCard";
+import { UpcomingCard } from "./UpcomingCard";
 
-interface MovieListProps {
+interface upcomingListProps {
 	movies: Movie[];
 	isLoading?: boolean;
 }
 
-export const MovieList = ({ movies, isLoading }: MovieListProps) => {
+export const UpcomingList = ({ movies, isLoading }: upcomingListProps) => {
 	if (isLoading) {
 		return <div>Loading...</div>;
 	}
 	return (
 		<div className="flex gap-4 py-4 px-2 overflow-x-auto overflow-y-hidden">
 			{movies.map((movie) => (
-				<MovieCard
+				<UpcomingCard
 					key={movie.id}
 					movie={movie}
 				/>

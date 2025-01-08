@@ -17,16 +17,20 @@ export default function Header() {
 				<div className="flex flex-row items-center mx-8 w-full">
 					<div className="">
 						<h1 className="text-4xl font-semibold text-white">
-							Movie<span className="text-amber-500">Finder</span>
+							Movie
+							<span className="text-accentColor">Finder</span>
 						</h1>
 					</div>
-					<div className="w-full">
+					<div className="ml-auto">
 						<span>
 							<Dialog>
-								<DialogTrigger className="w-full">
-									<Search className="text-white ml-auto" />
+								<DialogTrigger className="flex flex-row items-center bg-accentColor w-28 justify-between h-8 rounded-lg gap-x-2">
+									<span className="text-white font-semibold ml-2">
+										Buscar
+									</span>
+									<Search className="text-white mr-2" />
 								</DialogTrigger>
-								<DialogContent className="lg:max-w-[650px] lg:h-[180px] max-w-[180px] items-center bg-zinc-950 backdrop-blur-2xl border-zinc-900">
+								<DialogContent className="lg:max-w-[650px] lg:h-[180px] min-w-[250px] max-w-[350px] items-center bg-zinc-950 backdrop-blur-2xl border-zinc-900">
 									<DialogHeader>
 										<DialogTitle className="text-white">
 											Procure por algum filme

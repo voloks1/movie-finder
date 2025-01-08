@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 
 const font = Rubik({
 	variable: "--font-rubik",
@@ -21,10 +21,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${font.className} antialiased bg-zinc-950 h-screen w-full`}>
+				className={`${font.className} antialiased bg-zinc-950 h-screen 2xl:overflow-y-hidden`}>
 				{children}
 			</body>
 		</html>
 	);
 }
-
