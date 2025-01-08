@@ -58,7 +58,6 @@ Este projeto está atualmente em desenvolvimento. Próximas funcionalidades plan
 - [ ] Sistema de busca de filmes
 - [ ] Filtros por gênero, ano e avaliação
 - [x] Página detalhada para cada filme
-- [ ] Sistema de favoritos
 
 ## Contribuição 🤝
 
