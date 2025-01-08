@@ -55,10 +55,10 @@ npm run dev
 
 Este projeto está atualmente em desenvolvimento. Próximas funcionalidades planejadas:
 
-- [ ] Sistema de busca de filmes
-- [ ] Filtros por gênero, ano e avaliação
-- [✔] Página detalhada para cada filme
-- [ ] Sistema de favoritos
+ [ ] Sistema de busca de filmes
+ [ ] Filtros por gênero, ano e avaliação
+ [✔] Página detalhada para cada filme
+ [ ] Sistema de favoritos
 
 ## Contribuição 🤝
 
