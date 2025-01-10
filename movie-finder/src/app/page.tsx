@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import UnifiedSearchBar from "@/components/searchbar/SearchBar";
 
 export default function Home() {
 	const [movies, setMovies] = useState<Movie[]>([]);
@@ -84,27 +85,19 @@ export default function Home() {
 					<div className="ml-auto">
 						<span>
 							<Dialog>
-								<DialogTrigger className="flex flex-row items-center bg-accentColor w-28 justify-between h-8 rounded-lg gap-x-2">
+								<DialogTrigger className="flex flex-row bg-accentColor w-28 justify-between h-8 rounded-lg gap-x-2 items-center">
 									<span className="text-white font-semibold ml-2">
 										Buscar
 									</span>
 									<Search className="text-white mr-2" />
 								</DialogTrigger>
-								<DialogContent className="lg:max-w-[650px] lg:h-[180px] min-w-[250px] max-w-[350px] items-center bg-zinc-950 backdrop-blur-2xl border-zinc-900">
+								<DialogContent className="lg:max-w-[650px] lg:h-[180px] min-w-[250px] max-w-[350px] -translate-y-72 bg-zinc-950 backdrop-blur-2xl border-zinc-900">
 									<DialogHeader>
 										<DialogTitle className="text-white">
 											Procure por algum filme
 										</DialogTitle>
-										<DialogDescription className="w-full">
-											<Input
-												className="border-zinc-800 focus:ring-transparent text-white h-10 w-full"
-												type="text"
-												placeholder="Pesquisar filme..."
-											/>
-											<Button className="flex mx-auto mt-4 bg-transparent/20 text-zinc-300">
-												<Search />
-												Pesquisar
-											</Button>
+										<DialogDescription className="w-full pt-4">
+											<UnifiedSearchBar />
 										</DialogDescription>
 									</DialogHeader>
 								</DialogContent>

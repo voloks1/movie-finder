@@ -143,7 +143,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
 										</span>
 									</div>
 									<div className="flex flex-row">
-										<div className="flex flex-wrap gap-2">
+										<div className="flex flex-wrap gap-2 items-center">
 											{movieDetails.genres.map(
 												(genre) => (
 													<span

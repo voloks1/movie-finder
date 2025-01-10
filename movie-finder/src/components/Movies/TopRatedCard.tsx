@@ -140,7 +140,7 @@ export const TopRatedCard = ({ movie }: MovieCardProps) => {
 										</span>
 									</div>
 
-									<div className="flex flex-wrap gap-2">
+									<div className="flex flex-wrap gap-2 items-center">
 										{movieDetails.genres.map((genre) => (
 											<span
 												key={genre.id}

@@ -1,3 +1,4 @@
+import { Season } from "@/types/tv";
 import axios from "axios";
 
 export const api = axios.create({
@@ -21,4 +22,20 @@ export const tmdbAPI = {
 	getUpcoming: (page = 1) => api.get("movie/upcoming", { params: { page } }),
 	getMovieID: (id: string) =>
 		api.get(`movie/${id}`).then((response) => response.data),
+	getPopularTVShows: () =>
+		api.get("/tv/popular").then((response) => response.data),
+	getSeasonDetails: (tvId: string, seasonNumber: number) =>
+		api
+			.get<Season>(`/tv/${tvId}/season/${seasonNumber}`)
+			.then((response) => response.data),
+	getTVShowDetails: (id: string) =>
+		api.get(`tv/${id}`).then((response) => response.data),
+	getAiringToday: () =>
+		api.get("/tv/airing_today").then((response) => response.data),
+	getTopRatedTVShows: () =>
+		api.get("/tv/top_rated").then((response) => response.data),
+	multiSearch: (query: string) =>
+		api
+			.get("/search/multi", { params: { query } })
+			.then((response) => response.data),
 };
