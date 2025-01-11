@@ -20,7 +20,6 @@ export default function UnifiedSearchBar() {
 			setIsLoading(true);
 			try {
 				const data = await tmdbAPI.multiSearch(searchQuery);
-				// Filtra apenas resultados de filmes e séries
 				const filteredResults = data.results.filter(
 					(item) =>
 						item.media_type === "movie" || item.media_type === "tv",
@@ -36,11 +35,9 @@ export default function UnifiedSearchBar() {
 		}
 	};
 
-	// Função helper para formatar o título
 	const getTitle = (result: SearchResult) =>
 		result.media_type === "movie" ? result.title : result.name;
 
-	// Função helper para formatar a data
 	const getYear = (result: SearchResult) => {
 		const date =
 			result.media_type === "movie"
@@ -49,13 +46,11 @@ export default function UnifiedSearchBar() {
 		return date ? new Date(date).getFullYear() : null;
 	};
 
-	// Função helper para gerar o link
 	const getLink = (result: SearchResult) =>
 		result.media_type === "movie"
 			? `/movie/${result.id}`
 			: `/tv/${result.id}`;
 
-	// Função helper para obter o ícone do tipo de mídia
 	const getMediaTypeIcon = (mediaType: "movie" | "tv") => {
 		return mediaType === "movie" ? "🎬" : "📺";
 	};
@@ -112,9 +107,9 @@ export default function UnifiedSearchBar() {
 												result.media_type,
 											)}
 										</span>
-										<h3 className="font-semibold">
+										<span className="font-semibold">
 											{getTitle(result)}
-										</h3>
+										</span>
 									</div>
 									<div className="flex items-center gap-2 text-sm text-gray-600">
 										{getYear(result) && (
